@@ -1,0 +1,806 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>本科数学建模竞赛知识总结 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本科数学建模竞赛知识总结 基于 23 张学习资料截图整理，面向本科数学建模竞赛（CUMCM 等）。核心策略：先定模型类别，再选具体算法——精准匹配问题场景是构建高效模型的第一步。   一、数学建模全流程（10 步 + 竞赛路线图 8 步）1. 标准 10 步流程   步骤 关键动作    01 现实问题 锚定具体痛点、明确核心问题与研究价值   02 问题分析 拆解构成要素、边界约束、因果关系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="本科数学建模竞赛知识总结">
+<meta property="og:url" content="http://example.com/2026/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本科数学建模竞赛知识总结 基于 23 张学习资料截图整理，面向本科数学建模竞赛（CUMCM 等）。核心策略：先定模型类别，再选具体算法——精准匹配问题场景是构建高效模型的第一步。   一、数学建模全流程（10 步 + 竞赛路线图 8 步）1. 标准 10 步流程   步骤 关键动作    01 现实问题 锚定具体痛点、明确核心问题与研究价值   02 问题分析 拆解构成要素、边界约束、因果关系">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2026-08-25T11:30:00.000Z">
+<meta property="article:modified_time" content="2026-08-25T05:05:06.812Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数学建模">
+<meta property="article:tag" content="竞赛">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "本科数学建模竞赛知识总结",
+  "url": "http://example.com/2026/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/",
+  "image": "http://example.com/img/butterfly-icon.png",
+  "datePublished": "2026-08-25T11:30:00.000Z",
+  "dateModified": "2026-08-25T05:05:06.812Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "John Doe",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.1.260810"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '本科数学建模竞赛知识总结',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.0.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/"><span class="site-name">本科数学建模竞赛知识总结</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">本科数学建模竞赛知识总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-08-25T11:30:00.000Z" title="Created 2026-08-25 19:30:00">2026-08-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-08-25T05:05:06.812Z" title="Updated 2026-08-25 13:05:06">2026-08-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="本科数学建模竞赛知识总结"><a href="#本科数学建模竞赛知识总结" class="headerlink" title="本科数学建模竞赛知识总结"></a>本科数学建模竞赛知识总结</h1><blockquote>
+<p>基于 23 张学习资料截图整理，面向本科数学建模竞赛（CUMCM 等）。<br>核心策略：<strong>先定模型类别，再选具体算法——精准匹配问题场景是构建高效模型的第一步。</strong></p>
+</blockquote>
+<hr>
+<h2 id="一、数学建模全流程（10-步-竞赛路线图-8-步）"><a href="#一、数学建模全流程（10-步-竞赛路线图-8-步）" class="headerlink" title="一、数学建模全流程（10 步 + 竞赛路线图 8 步）"></a>一、数学建模全流程（10 步 + 竞赛路线图 8 步）</h2><h3 id="1-标准-10-步流程"><a href="#1-标准-10-步流程" class="headerlink" title="1. 标准 10 步流程"></a>1. 标准 10 步流程</h3><table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>关键动作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01 现实问题</td>
+<td>锚定具体痛点、明确核心问题与研究价值</td>
+</tr>
+<tr>
+<td>02 问题分析</td>
+<td>拆解构成要素、边界约束、因果关系</td>
+</tr>
+<tr>
+<td>03 合理假设</td>
+<td>剔除干扰因子，明确适用范围与理想化边界</td>
+</tr>
+<tr>
+<td>04 变量定义</td>
+<td>业务概念 → 数学变量 → 数据指标</td>
+</tr>
+<tr>
+<td>05 模型建立</td>
+<td>匹配数学理论框架，构建量化关系</td>
+</tr>
+<tr>
+<td>06 模型求解</td>
+<td>编程、统计软件或数值计算</td>
+</tr>
+<tr>
+<td>07 结果分析</td>
+<td>解读经济与现实意义，识别趋势&#x2F;异常</td>
+</tr>
+<tr>
+<td>08 模型验证</td>
+<td>数据比对、灵敏度分析、回溯测试</td>
+</tr>
+<tr>
+<td>09 模型优化</td>
+<td>修正参数、调整结构、迭代提升</td>
+</tr>
+<tr>
+<td>10 论文撰写</td>
+<td>系统梳理论证逻辑，形成完整报告</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>关键闭环</strong>：结果分析 → 模型验证 → 模型优化，反复迭代。</p>
+</blockquote>
+<h3 id="2-竞赛路线图-8-步"><a href="#2-竞赛路线图-8-步" class="headerlink" title="2. 竞赛路线图 8 步"></a>2. 竞赛路线图 8 步</h3><ol>
+<li>精准选题 → 2. 问题拆解 → 3. 合理假设 → 4. 变量定义 → 5. 模型构建 → 6. 算法求解 → 7. 结果验证 → 8. 论文撰写</li>
+</ol>
+<p>优秀论文四标准：<strong>科学可信、表达清晰、边界明确、具备落地性</strong>。</p>
+<hr>
+<h2 id="二、六大模型类别速览"><a href="#二、六大模型类别速览" class="headerlink" title="二、六大模型类别速览"></a>二、六大模型类别速览</h2><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>核心思想</th>
+<th>典型算法</th>
+<th>典型赛题场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>优化决策模型</strong> (32%)</td>
+<td>资源约束下求最优解</td>
+<td>LP、IP、DP、GA、PSO、ACO</td>
+<td>资源分配、路径规划、生产调度</td>
+</tr>
+<tr>
+<td><strong>连续微分模型</strong> (22%)</td>
+<td>状态随时间&#x2F;空间动态演化</td>
+<td>ODE、PDE、差分方程</td>
+<td>传染病传播、污染物扩散、火箭轨迹</td>
+</tr>
+<tr>
+<td><strong>数据预测模型</strong> (21%)</td>
+<td>历史数据驱动未来推断</td>
+<td>回归、ARIMA、GM(1,1)、随机森林、LSTM</td>
+<td>销量预测、股价走势、用户画像</td>
+</tr>
+<tr>
+<td><strong>概率随机模型</strong> (13%)</td>
+<td>量化不确定性</td>
+<td>蒙特卡洛、排队论、马尔可夫链、贝叶斯</td>
+<td>金融风险、排队系统、状态预测</td>
+</tr>
+<tr>
+<td><strong>评价决策模型</strong> (12%)</td>
+<td>多维度指标综合评估</td>
+<td>AHP、熵权法、TOPSIS、模糊评价、DEA</td>
+<td>城市排名、供应商选择、绩效评估</td>
+</tr>
+<tr>
+<td><strong>图论网络模型</strong></td>
+<td>抽象节点‑边关系结构</td>
+<td>最短路径、网络流、匹配、拓扑排序</td>
+<td>交通路网、物资调配、社交网络</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="三、模型选择决策树"><a href="#三、模型选择决策树" class="headerlink" title="三、模型选择决策树"></a>三、模型选择决策树</h2><table>
+<thead>
+<tr>
+<th>问题特征</th>
+<th>对应模型类别</th>
+<th>判断关键词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>状态随时间&#x2F;空间演变</td>
+<td>连续动态体系</td>
+<td>演化、动态、过程</td>
+</tr>
+<tr>
+<td>需分配资源或寻找最优动作</td>
+<td>优化决策模型</td>
+<td>最优、调度、规划、选址</td>
+</tr>
+<tr>
+<td>依赖历史数据进行预测&#x2F;分类</td>
+<td>数据驱动预测</td>
+<td>预测、趋势、分类、回归</td>
+</tr>
+<tr>
+<td>多方案&#x2F;多指标量化排序</td>
+<td>综合评价体系</td>
+<td>评价、排序、选优、综合评分</td>
+</tr>
+<tr>
+<td>存在随机干扰或概率分布</td>
+<td>随机不确定性</td>
+<td>随机、风险、概率、排队</td>
+</tr>
+<tr>
+<td>涉及实体连接、路径或网络流</td>
+<td>网络拓扑结构</td>
+<td>网络、路径、节点、流量</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>黄金检验原则</strong>：如果一个模型不能明确回答“它解决了题目中的哪一对核心矛盾或具体问题”，那它大概率只是形式上的装饰。</p>
+</blockquote>
+<hr>
+<h2 id="四、各类模型详解与算法适用场景"><a href="#四、各类模型详解与算法适用场景" class="headerlink" title="四、各类模型详解与算法适用场景"></a>四、各类模型详解与算法适用场景</h2><h3 id="4-1-优化决策模型"><a href="#4-1-优化决策模型" class="headerlink" title="4.1 优化决策模型"></a>4.1 优化决策模型</h3><h4 id="精确算法家族"><a href="#精确算法家族" class="headerlink" title="精确算法家族"></a>精确算法家族</h4><table>
+<thead>
+<tr>
+<th>算法</th>
+<th>核心特征</th>
+<th>经典解法</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>线性规划 LP</strong></td>
+<td>目标函数与约束均为线性</td>
+<td>单纯形法、内点法</td>
+<td>企业资源分配、物流运输调度、生产计划排程、金融投资组合</td>
+</tr>
+<tr>
+<td><strong>整数规划 IP</strong></td>
+<td>变量为整数（含 0‑1）</td>
+<td>分支定界、割平面、匈牙利算法</td>
+<td>工厂选址、人员排班、背包问题、车辆路径规划 VRP</td>
+</tr>
+<tr>
+<td><strong>动态规划 DP</strong></td>
+<td>多阶段子问题、状态转移</td>
+<td>贝尔曼最优性原理、正&#x2F;逆向递推</td>
+<td>最短路径、库存动态管理、生产批量调度、项目工期优化</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>决策黄金法则</strong>：在算力与时间允许范围内，优先采用精确算法而非启发式算法，以确保全局最优解。</p>
+</blockquote>
+<h4 id="启发式算法家族"><a href="#启发式算法家族" class="headerlink" title="启发式算法家族"></a>启发式算法家族</h4><table>
+<thead>
+<tr>
+<th>算法</th>
+<th>核心思想</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>遗传算法 GA</strong></td>
+<td>选择、交叉、变异，模拟自然选择</td>
+<td>大规模组合优化、非凸复杂空间搜索、车间调度与资源分配</td>
+</tr>
+<tr>
+<td><strong>模拟退火 SA</strong></td>
+<td>高温允许“跳坑”，逐步收敛全局最优</td>
+<td>避免陷入局部极值、函数全局寻优、工程结构与参数优化</td>
+</tr>
+<tr>
+<td><strong>粒子群算法 PSO</strong></td>
+<td>个体经验 + 群体最优信息共享</td>
+<td>连续空间优化、神经网络超参数调优、电力与金融预测模型</td>
+</tr>
+<tr>
+<td><strong>蚁群算法 ACO</strong></td>
+<td>信息素正反馈，路径越短浓度越高</td>
+<td>旅行商问题 TSP、物流配送路径规划、网络路由与任务分配</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>精确算法 vs 启发式算法</strong>：精确算法追求数学上绝对最优但慢；启发式算法以微小精度换效率，适合大规模、非线性、多约束复杂决策问题。</p>
+</blockquote>
+<h4 id="优化算法选择对照"><a href="#优化算法选择对照" class="headerlink" title="优化算法选择对照"></a>优化算法选择对照</h4><table>
+<thead>
+<tr>
+<th>问题特征</th>
+<th>推荐算法</th>
+<th>不推荐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>目标&#x2F;约束线性</td>
+<td>LP &#x2F; NLP 首选</td>
+<td>枚举法</td>
+</tr>
+<tr>
+<td>变量离散</td>
+<td>IP &#x2F; MIP 首选</td>
+<td>LP（无法处理整数）</td>
+</tr>
+<tr>
+<td>阶段依赖明确</td>
+<td>动态规划</td>
+<td>大规模问题状态空间爆炸</td>
+</tr>
+<tr>
+<td>非线性、高维、非凸</td>
+<td>GA &#x2F; PSO 启发式</td>
+<td>枚举法（维度灾难）</td>
+</tr>
+<tr>
+<td>大规模问题</td>
+<td>启发式算法</td>
+<td>精确算法求解慢</td>
+</tr>
+</tbody></table>
+<h3 id="4-2-连续微分方程模型"><a href="#4-2-连续微分方程模型" class="headerlink" title="4.2 连续微分方程模型"></a>4.2 连续微分方程模型</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>核心特征</th>
+<th>典型应用</th>
+<th>数值求解方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>常微分方程 ODE</strong></td>
+<td>单自变量连续演化</td>
+<td>种群动力学（SIR）、机械振动、电路暂态</td>
+<td>欧拉法、龙格‑库塔 RK4</td>
+</tr>
+<tr>
+<td><strong>偏微分方程 PDE</strong></td>
+<td>多变量场（时空耦合）</td>
+<td>热传导、流体控制、电磁波、量子力学</td>
+<td>有限差分 FDM、有限元 FEM、有限体积 FVM</td>
+</tr>
+<tr>
+<td><strong>差分方程 DE</strong></td>
+<td>时间&#x2F;空间离散化递推</td>
+<td>离散种群模型、宏观经济增长、数字滤波器</td>
+<td>递推迭代、Z 变换、蛛网模型</td>
+</tr>
+</tbody></table>
+<p><strong>三大验证准则</strong>：极限检验、守恒律检验、量纲检验。</p>
+<h3 id="4-3-数据预测模型"><a href="#4-3-数据预测模型" class="headerlink" title="4.3 数据预测模型"></a>4.3 数据预测模型</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>核心方法</th>
+<th>适用场景</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>回归分析</strong></td>
+<td>线性&#x2F;多元&#x2F;Logistic 回归</td>
+<td>用户流失归因、产品定价敏感度、信贷违约风险</td>
+<td>解释“原因”，明确影响权重</td>
+</tr>
+<tr>
+<td><strong>时间序列分析</strong></td>
+<td>ARIMA、SARIMA、指数平滑</td>
+<td>电商促销销量、直播流量、季节性库存、股价短期</td>
+<td>捕捉趋势、周期、随机扰动</td>
+</tr>
+<tr>
+<td><strong>插值与拟合</strong></td>
+<td>多项式插值、样条、移动平均</td>
+<td>IoT 数据清洗、实验曲线、地理信息插值</td>
+<td>补全缺失、平滑噪声</td>
+</tr>
+<tr>
+<td><strong>GM(1,1) 灰色预测</strong></td>
+<td>小样本指数增长建模</td>
+<td>小样本（&gt;10）、信息不完全的新品预测</td>
+<td>半透明模型，数据需求低</td>
+</tr>
+<tr>
+<td><strong>随机森林</strong></td>
+<td>集成决策树</td>
+<td>大样本（&gt;500）、非线性&#x2F;高维特征</td>
+<td>黑盒，可解释性低</td>
+</tr>
+<tr>
+<td><strong>LSTM</strong></td>
+<td>长短期记忆网络</td>
+<td>海量样本（&gt;1k）、长短期依赖、非线性</td>
+<td>极低可解释性，计算资源高</td>
+</tr>
+</tbody></table>
+<p><strong>决策建议</strong>：数据量中等（万级以内）、业务逻辑需透明解释时，优先选择经典统计方法。</p>
+<h3 id="4-4-评价决策模型"><a href="#4-4-评价决策模型" class="headerlink" title="4.4 评价决策模型"></a>4.4 评价决策模型</h3><h4 id="权重计算方法"><a href="#权重计算方法" class="headerlink" title="权重计算方法"></a>权重计算方法</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>核心逻辑</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>AHP 层次分析法</strong></td>
+<td>专家定性转定量，两两比较确定权重</td>
+<td>数据匮乏、经验主导；战略规划、政策评估、社会科学定性评价</td>
+</tr>
+<tr>
+<td><strong>熵权法</strong></td>
+<td>数据离散程度越高，权重越大</td>
+<td>数据丰富、规避人为主观；经济绩效、财务分析、自然科学定量指标</td>
+</tr>
+<tr>
+<td><strong>组合赋权法</strong></td>
+<td>AHP + 熵权法加权融合</td>
+<td>高水平论文与复杂商业决策，兼顾科学与实用</td>
+</tr>
+</tbody></table>
+<h4 id="综合评价方法"><a href="#综合评价方法" class="headerlink" title="综合评价方法"></a>综合评价方法</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>核心思想</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>TOPSIS</strong></td>
+<td>计算与理想解&#x2F;负理想解的欧氏距离</td>
+<td>多方案优选决策、工程项目比选</td>
+</tr>
+<tr>
+<td><strong>模糊综合评价</strong></td>
+<td>隶属度函数将定性语言量化</td>
+<td>服务质量评级、满意度调查、大量主观定性指标</td>
+</tr>
+<tr>
+<td><strong>灰色关联分析</strong></td>
+<td>比较序列与参考序列几何相似度</td>
+<td>小样本数据评估、信息不完全的新品研发预测</td>
+</tr>
+<tr>
+<td><strong>DEA 数据包络分析</strong></td>
+<td>非参数方法评价多投入多产出 DMU 效率</td>
+<td>企业绩效评估、资源配置效率、投入产出优化</td>
+</tr>
+</tbody></table>
+<h3 id="4-5-概率随机模型"><a href="#4-5-概率随机模型" class="headerlink" title="4.5 概率随机模型"></a>4.5 概率随机模型</h3><table>
+<thead>
+<tr>
+<th>模型</th>
+<th>核心</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>蒙特卡洛模拟</strong></td>
+<td>随机抽样与数值近似</td>
+<td>金融风险测算、高维积分、工程仿真验证</td>
+</tr>
+<tr>
+<td><strong>排队论模型</strong></td>
+<td>到达与服务的平衡</td>
+<td>客服中心排班、交通枢纽调度、医院诊室规划</td>
+</tr>
+<tr>
+<td><strong>马尔可夫链</strong></td>
+<td>无后效性状态转移</td>
+<td>市场份额预测、舆情传播推演、用户行为留存</td>
+</tr>
+<tr>
+<td><strong>贝叶斯统计</strong></td>
+<td>动态概率推断框架</td>
+<td>医疗诊断辅助、智能风控、机器学习参数</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>当问题具有高度不确定性、随机干扰显著或难以建立精确解析模型时，引入概率随机建模。</p>
+</blockquote>
+<h3 id="4-6-图论与网络模型"><a href="#4-6-图论与网络模型" class="headerlink" title="4.6 图论与网络模型"></a>4.6 图论与网络模型</h3><table>
+<thead>
+<tr>
+<th>模型</th>
+<th>核心算法</th>
+<th>典型应用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>最短路径模型</strong></td>
+<td>Dijkstra、Floyd、Bellman‑Ford</td>
+<td>物流配送路径、地图导航、通信网络延迟最小化、电路布线</td>
+</tr>
+<tr>
+<td><strong>网络流模型</strong></td>
+<td>最大流（Dinic&#x2F;ISAP）、最小费用最大流、最小割</td>
+<td>交通网络最大吞吐量、资源分配调度、任务指派成本最小化、供水管网</td>
+</tr>
+<tr>
+<td><strong>匹配与拓扑排序</strong></td>
+<td>匈牙利算法、KM 算法、拓扑排序</td>
+<td>人才岗位匹配、智能排课、项目依赖解析、编译器依赖分析</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>建模心法：遇到“实体节点、关联边、约束关系”的问题，优先抽象为图论模型。</p>
+</blockquote>
+<hr>
+<h2 id="五、六类模型检验方法"><a href="#五、六类模型检验方法" class="headerlink" title="五、六类模型检验方法"></a>五、六类模型检验方法</h2><table>
+<thead>
+<tr>
+<th>检验方法</th>
+<th>核心问题</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>误差分析</strong></td>
+<td>输出偏差有多大？</td>
+<td>量化预测值与真实值的偏离程度</td>
+</tr>
+<tr>
+<td><strong>敏感性分析</strong></td>
+<td>哪些参数最影响结果？</td>
+<td>识别关键变量，厘清输入对输出的驱动权重</td>
+</tr>
+<tr>
+<td><strong>稳定性检验</strong></td>
+<td>换初值算法是否一致？</td>
+<td>验证不同初始值&#x2F;迭代路径下结果的一致性</td>
+</tr>
+<tr>
+<td><strong>鲁棒性检验</strong></td>
+<td>数据变差模型还能用吗？</td>
+<td>模拟缺失、噪声、异常值，测试抗干扰能力</td>
+</tr>
+<tr>
+<td><strong>对比基线</strong></td>
+<td>相对基准方案改善多少？</td>
+<td>与经验值&#x2F;基准模型对比，量化实际价值</td>
+</tr>
+<tr>
+<td><strong>场景测试</strong></td>
+<td>换参数换约束可行吗？</td>
+<td>评估模型在各类边界条件与实际场景下的适配性</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>没有经过系统化检验的模型结果，本质上只是“漂亮的数学猜测”。</p>
+</blockquote>
+<hr>
+<h2 id="六、竞赛常见失败原因与避坑指南"><a href="#六、竞赛常见失败原因与避坑指南" class="headerlink" title="六、竞赛常见失败原因与避坑指南"></a>六、竞赛常见失败原因与避坑指南</h2><table>
+<thead>
+<tr>
+<th>坑</th>
+<th>痛点</th>
+<th>对策</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>算法套用僵化</strong></td>
+<td>盲目堆砌 GA&#x2F;PSO，忽略目标函数与约束</td>
+<td>先锚定核心矛盾，再针对性匹配算法</td>
+</tr>
+<tr>
+<td><strong>模型解释缺失</strong></td>
+<td>公式罗列无含义拆解，评委看不懂</td>
+<td>用通俗语言讲清模型解决的具体业务问题</td>
+</tr>
+<tr>
+<td><strong>效果验证薄弱</strong></td>
+<td>只展示最优结果，无稳定性&#x2F;鲁棒性分析</td>
+<td>补充基线对比、噪声干扰、数据扩容等压力测试</td>
+</tr>
+<tr>
+<td><strong>图表表达低效</strong></td>
+<td>无标题、无单位、无重点</td>
+<td>标题即结论，标注清晰单位，用颜色强化关键数据</td>
+</tr>
+<tr>
+<td><strong>论证逻辑断层</strong></td>
+<td>问题‑方法‑结果割裂</td>
+<td>用整体流程图统领全文，形成闭环论证</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="七、论文写作要点"><a href="#七、论文写作要点" class="headerlink" title="七、论文写作要点"></a>七、论文写作要点</h2><h3 id="摘要四段式"><a href="#摘要四段式" class="headerlink" title="摘要四段式"></a>摘要四段式</h3><ol>
+<li><strong>问题定位</strong>：研究对象、核心目标、背景与科学问题</li>
+<li><strong>方法设计</strong>：模型体系、实验方案、求解算法</li>
+<li><strong>核心结果</strong>：关键数据、显著性指标、趋势特征</li>
+<li><strong>结论升华</strong>：理论创新、实践建议、客观局限性</li>
+</ol>
+<h3 id="图表三原则"><a href="#图表三原则" class="headerlink" title="图表三原则"></a>图表三原则</h3><ol>
+<li><strong>标题即结论，拒绝空泛</strong></li>
+<li><strong>要素无遗漏，清晰可读</strong>（坐标轴名称、单位、图例、数据标签）</li>
+<li><strong>图注补逻辑，强化关联</strong></li>
+</ol>
+<blockquote>
+<p>核心准则：图表是论证工具而非装饰——坚决删除不改变结论的冗余图表。</p>
+</blockquote>
+<hr>
+<h2 id="八、本科-vs-研究生竞赛差异"><a href="#八、本科-vs-研究生竞赛差异" class="headerlink" title="八、本科 vs 研究生竞赛差异"></a>八、本科 vs 研究生竞赛差异</h2><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本科赛</th>
+<th>研究生赛</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>侧重点</td>
+<td>建模思路与方法论</td>
+<td>算法深度与工程落地</td>
+</tr>
+<tr>
+<td>数据规模</td>
+<td>适中</td>
+<td>庞大、含噪声</td>
+</tr>
+<tr>
+<td>核心考核</td>
+<td>“怎么想”——模型框架设计能力</td>
+<td>“怎么做”——实现、性能、部署</td>
+</tr>
+<tr>
+<td>模型深度</td>
+<td>经典模型为主</td>
+<td>深度学习、强化学习、多 Agent 仿真</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="九、推荐学习资源"><a href="#九、推荐学习资源" class="headerlink" title="九、推荐学习资源"></a>九、推荐学习资源</h2><table>
+<thead>
+<tr>
+<th>资源</th>
+<th>网址</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CUMCM 竞赛官方</td>
+<td><a target="_blank" rel="noopener" href="http://www.mcm.edu.cn/">www.mcm.edu.cn</a></td>
+<td>章程、赛题、评阅规范</td>
+</tr>
+<tr>
+<td>教育部备赛指导平台</td>
+<td>dxs.moe.gov.cn</td>
+<td>深度讲评、优秀论文</td>
+</tr>
+<tr>
+<td>研究生竞赛进阶真题库</td>
+<td>cpipc.acge.org.cn</td>
+<td>进阶训练、拓展思维</td>
+</tr>
+<tr>
+<td>全量真题与论文实战资源包</td>
+<td>2004‑2024 全收录</td>
+<td>真题演练、方法论解析</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="十、速查口诀"><a href="#十、速查口诀" class="headerlink" title="十、速查口诀"></a>十、速查口诀</h2><ul>
+<li><strong>优化问题看约束</strong>：线性 LP，整数 IP，阶段 DP，复杂启发式。</li>
+<li><strong>动态演化用微分</strong>：ODE 单变量，PDE 多场耦合，DE 离散化。</li>
+<li><strong>预测先看数据量</strong>：小样本 GM，中样本 ARIMA&#x2F;回归，大样本 ML&#x2F;LSTM。</li>
+<li><strong>评价排序找权重</strong>：主观 AHP，客观熵权，排序 TOPSIS，模糊语言用模糊评价。</li>
+<li><strong>不确定性上概率</strong>：蒙特卡洛仿真，排队论调度，马尔可夫状态，贝叶斯更新。</li>
+<li><strong>网络关系画图论</strong>：最短路径、最大流、匹配排序。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2026/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">http://example.com/2026/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a><a class="post-meta__tags" href="/tags/%E7%AB%9E%E8%B5%9B/">竞赛</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/08/22/%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0/" title="零基础教程：如何将本地文件与项目上传至GitHub"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">零基础教程：如何将本地文件与项目上传至GitHub</div></div><div class="info-2"><div class="info-item-1"> 本文适合GitHub新手，提供网页上传、Git命令行、图形工具三种上传方案，一步步带你完成项目上传。  一、前期准备工作 注册并登录 GitHub 创建全新仓库 点击网页右上角 + → New repository 填写仓库名称 ✅新手建议：不要勾选 Add a README file，避免推送代码时出现冲突报错 仓库权限选择 Public(公开) 或者 Private(私有) 点击 Create repository 创建仓库   创建完成后，复制仓库的HTTPS链接，后续命令需要用到。  方案一：网页拖拽上传（少量文件首选，无需安装软件） ⚠️限制：单个文件最大25MB，不支持完整多级文件夹上传   打开你的GitHub仓库主页 点击 Add file → Upload files 将电脑本地文件直接拖拽到虚线上传区域，也可以点击choose your files手动选择文件 页面下方填写提交说明（Commit message），例：上传PDF学习资料 保持默认选项 Commit directly to the main branch 点击 Commit changes，上...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Doe</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%A7%91%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">本科数学建模竞赛知识总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%85%A8%E6%B5%81%E7%A8%8B%EF%BC%8810-%E6%AD%A5-%E7%AB%9E%E8%B5%9B%E8%B7%AF%E7%BA%BF%E5%9B%BE-8-%E6%AD%A5%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">一、数学建模全流程（10 步 + 竞赛路线图 8 步）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A0%87%E5%87%86-10-%E6%AD%A5%E6%B5%81%E7%A8%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 标准 10 步流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%AB%9E%E8%B5%9B%E8%B7%AF%E7%BA%BF%E5%9B%BE-8-%E6%AD%A5"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 竞赛路线图 8 步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%85%AD%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%88%AB%E9%80%9F%E8%A7%88"><span class="toc-number">1.2.</span> <span class="toc-text">二、六大模型类别速览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-number">1.3.</span> <span class="toc-text">三、模型选择决策树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%90%84%E7%B1%BB%E6%A8%A1%E5%9E%8B%E8%AF%A6%E8%A7%A3%E4%B8%8E%E7%AE%97%E6%B3%95%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.4.</span> <span class="toc-text">四、各类模型详解与算法适用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E4%BC%98%E5%8C%96%E5%86%B3%E7%AD%96%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 优化决策模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B2%BE%E7%A1%AE%E7%AE%97%E6%B3%95%E5%AE%B6%E6%97%8F"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">精确算法家族</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8F%91%E5%BC%8F%E7%AE%97%E6%B3%95%E5%AE%B6%E6%97%8F"><span class="toc-number">1.4.1.2.</span> <span class="toc-text">启发式算法家族</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E9%80%89%E6%8B%A9%E5%AF%B9%E7%85%A7"><span class="toc-number">1.4.1.3.</span> <span class="toc-text">优化算法选择对照</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E8%BF%9E%E7%BB%AD%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 连续微分方程模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E6%8D%AE%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 数据预测模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E8%AF%84%E4%BB%B7%E5%86%B3%E7%AD%96%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.4 评价决策模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%83%E9%87%8D%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">权重计算方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%BC%E5%90%88%E8%AF%84%E4%BB%B7%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.4.2.</span> <span class="toc-text">综合评价方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E6%A6%82%E7%8E%87%E9%9A%8F%E6%9C%BA%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.4.5.</span> <span class="toc-text">4.5 概率随机模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-%E5%9B%BE%E8%AE%BA%E4%B8%8E%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.4.6.</span> <span class="toc-text">4.6 图论与网络模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%85%AD%E7%B1%BB%E6%A8%A1%E5%9E%8B%E6%A3%80%E9%AA%8C%E6%96%B9%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">五、六类模型检验方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%AB%9E%E8%B5%9B%E5%B8%B8%E8%A7%81%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0%E4%B8%8E%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97"><span class="toc-number">1.6.</span> <span class="toc-text">六、竞赛常见失败原因与避坑指南</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E8%A6%81%E7%82%B9"><span class="toc-number">1.7.</span> <span class="toc-text">七、论文写作要点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%91%98%E8%A6%81%E5%9B%9B%E6%AE%B5%E5%BC%8F"><span class="toc-number">1.7.1.</span> <span class="toc-text">摘要四段式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E8%A1%A8%E4%B8%89%E5%8E%9F%E5%88%99"><span class="toc-number">1.7.2.</span> <span class="toc-text">图表三原则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E6%9C%AC%E7%A7%91-vs-%E7%A0%94%E7%A9%B6%E7%94%9F%E7%AB%9E%E8%B5%9B%E5%B7%AE%E5%BC%82"><span class="toc-number">1.8.</span> <span class="toc-text">八、本科 vs 研究生竞赛差异</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%8E%A8%E8%8D%90%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="toc-number">1.9.</span> <span class="toc-text">九、推荐学习资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E9%80%9F%E6%9F%A5%E5%8F%A3%E8%AF%80"><span class="toc-number">1.10.</span> <span class="toc-text">十、速查口诀</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="本科数学建模竞赛知识总结">本科数学建模竞赛知识总结</a><time datetime="2026-08-25T11:30:00.000Z" title="Created 2026-08-25 19:30:00">2026-08-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/22/%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0/" title="零基础教程：如何将本地文件与项目上传至GitHub">零基础教程：如何将本地文件与项目上传至GitHub</a><time datetime="2026-08-21T16:00:00.000Z" title="Created 2026-08-22 00:00:00">2026-08-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/09/C%E8%AF%AD%E8%A8%80/" title="Untitled">Untitled</a><time datetime="2025-11-09T04:05:50.781Z" title="Created 2025-11-09 12:05:50">2025-11-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/04/first/" title="什么都不是如何写博客">什么都不是如何写博客</a><time datetime="2025-10-04T04:00:00.000Z" title="Created 2025-10-04 12:00:00">2025-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/03/hello-world/" title="Hello World">Hello World</a><time datetime="2025-10-03T07:19:51.717Z" title="Created 2025-10-03 15:19:51">2025-10-03</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By John Doe</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.0.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.1.260810</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.1.260810"></script><script src="/js/main.js?v=5.7.1.260810"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
